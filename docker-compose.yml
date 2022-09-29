@@ -20,7 +20,7 @@ services:
     networks:
       - test-net
     volumes:
-      - .docker/data/db:/data /db
+      - .docker/data/db:/data/db
     restart: unless-stopped
   nginx:
     image: nginx:latest
@@ -38,5 +38,5 @@ volumes:
 networks:
   test-net:
     driver: bridge
-    name: nodeapp
+    name: nodeapp-network
 
